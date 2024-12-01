@@ -2,7 +2,14 @@ name: test
 on: push
 jobs:
   test:
+<<<<<<< HEAD
     runs-on:  ubuntu-latest
+=======
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.7", "3.8", "3.9", "3.10"]
+>>>>>>> ba79de85a6a5ae3165329f014ca712b3418f97ad
     steps:
     - uses: actions/checkout@v3
     - name: All test
